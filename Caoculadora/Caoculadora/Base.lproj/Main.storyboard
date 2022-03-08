@@ -114,6 +114,9 @@
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="bt_porte_medio"/>
+                                        <connections>
+                                            <action selector="tocouMedio" destination="BYZ-38-t0r" eventType="touchUpInside" id="UE2-ge-7Ga"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZB-ly-kqM">
                                         <rect key="frame" x="238" y="211" width="50" height="50"/>
