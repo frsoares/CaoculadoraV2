@@ -106,21 +106,21 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Botão de porte pequeno"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_pequeno"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-lQ-9A6">
                                         <rect key="frame" x="130" y="211" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Botão de porte médio"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_medio"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZB-ly-kqM">
                                         <rect key="frame" x="238" y="211" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Botão de porte grande"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_grande"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,9 +137,9 @@
     </scenes>
     <resources>
         <image name="BG Shape" width="375" height="665"/>
-        <image name="Botão de porte grande" width="50" height="50"/>
-        <image name="Botão de porte médio" width="50" height="50"/>
-        <image name="Botão de porte pequeno" width="50" height="50"/>
+        <image name="bt_porte_grande" width="50" height="50"/>
+        <image name="bt_porte_medio" width="50" height="50"/>
+        <image name="bt_porte_pequeno" width="50" height="50"/>
         <image name="clara" width="296" height="317"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
