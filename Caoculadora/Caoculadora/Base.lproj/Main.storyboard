@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,6 +45,9 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="recaocular" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJt-mc-UMG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX anos!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-2m-Pkr">
                                         <rect key="frame" x="1" y="125" width="317" height="120"/>
@@ -62,7 +64,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.99221378559999995" green="0.992005527" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-Gm-9O6">
                                 <rect key="frame" x="32" y="120" width="310" height="261"/>
@@ -132,7 +134,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.992005527" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -141,9 +143,12 @@
                     <connections>
                         <outlet property="anosTextField" destination="vVq-Qz-nHT" id="ysF-RN-Yu4"/>
                         <outlet property="grandeButton" destination="pZB-ly-kqM" id="FXM-wV-Kck"/>
+                        <outlet property="inicioView" destination="IP6-Gm-9O6" id="w5M-Ta-dC7"/>
                         <outlet property="medioButton" destination="9fi-lQ-9A6" id="Vsj-ho-LUI"/>
                         <outlet property="mesesTextField" destination="cwh-3N-1R6" id="Xq4-PP-PnP"/>
                         <outlet property="pequenoButton" destination="a7A-qb-Q00" id="Mi6-DU-OUo"/>
+                        <outlet property="resultadoLabel" destination="9hG-2m-Pkr" id="vDU-fV-dgq"/>
+                        <outlet property="resultadoView" destination="SNd-o0-xX1" id="Fue-Od-UNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,8 +162,5 @@
         <image name="bt_porte_medio" width="50" height="50"/>
         <image name="bt_porte_pequeno" width="50" height="50"/>
         <image name="clara" width="296" height="317"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

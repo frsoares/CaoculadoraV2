@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet var anosTextField: UITextField!
     @IBOutlet var mesesTextField: UITextField!
     
+    @IBOutlet var inicioView: UIView!
+    @IBOutlet var resultadoView: UIView!
+    
+    @IBOutlet var resultadoLabel: UILabel!
+    
     @IBOutlet var pequenoButton: UIButton!
     @IBOutlet var medioButton: UIButton!
     @IBOutlet var grandeButton: UIButton!
@@ -25,6 +30,12 @@ class ViewController: UIViewController {
         else {
             exibeResultado(de: somaAnosTransformados() + 7)
         }
+    }
+    
+    @IBAction func recaocular() {
+        //Esconde view do resultado e exibe view de início
+        resultadoView.isHidden = true
+        inicioView.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -70,12 +81,19 @@ class ViewController: UIViewController {
     
     func escondeComponentes() {
         // Esconde os labels, botões e text fields relativos a anos, meses e porte
+        inicioView.isHidden = true
     }
     
     func exibeResultado(de valor: Int) {
-        print(valor)
         // Escreve na label de resultados o valor calculado em anos
+        resultadoLabel.text = "\(valor) anos!"
+        
+        //esconde tela de início
+        escondeComponentes()
+        
         // Exibe os labels de resultado e o botão de recãocular
+        resultadoView.isHidden = false
+        
     }
 
 }
