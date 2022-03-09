@@ -22,14 +22,22 @@ class ViewController: UIViewController {
     @IBOutlet var grandeButton: UIButton!
   
     @IBAction func tocou(_ sender: UIButton) {
+        let anos = leAnosCaninos()
+        let meses = leMesesCaninos()
+        
+        let cachorro: Cachorro
+        
         if sender == pequenoButton {
-            exibeResultado(de: somaAnosTransformados())
+            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "pequeno")
+            
         } else if sender == medioButton {
-            exibeResultado(de: somaAnosTransformados() + 3)
+            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "medio")
         }
         else {
-            exibeResultado(de: somaAnosTransformados() + 7)
+            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "grande")
         }
+        
+        exibeResultado(de: cachorro.idadeHumana())
     }
     
     @IBAction func recaocular() {
@@ -43,7 +51,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func transformaAnosCaninosEmHumanos() -> Int {
+    func leAnosCaninos() -> Int {
         // Lê o que está escrito no text field de anos
         let anosCaninos: String = anosTextField.text!
         
@@ -51,13 +59,10 @@ class ViewController: UIViewController {
         let anosCaninosInt: Int
         anosCaninosInt = Int(anosCaninos)!
         
-        // Multiplica o valor escrito em anos por 7
-        let anosHumanosInt = anosCaninosInt * 7
-        
-        return anosHumanosInt
+        return anosCaninosInt
     }
     
-    func transformaMesesCaninosEmHumanos() -> Int {
+    func leMesesCaninos() -> Int {
         // Lê o que está escrito no text field de meses
         let mesesCaninos: String = mesesTextField.text!
         
@@ -65,18 +70,7 @@ class ViewController: UIViewController {
         let mesesCaninosInt: Int
         mesesCaninosInt = Int(mesesCaninos)!
         
-        // Multiplica o valor escrito em meses por 7 / 12
-        let mesesHumanosInt = mesesCaninosInt * 7 / 12
-        
-        return mesesHumanosInt
-    }
-    
-    func somaAnosTransformados() -> Int {
-        // soma anos humanos + meses humanos
-        let anos = transformaAnosCaninosEmHumanos()
-        let meses = transformaMesesCaninosEmHumanos()
-        
-        return anos + meses
+        return mesesCaninosInt
     }
     
     func escondeComponentes() {
@@ -99,13 +93,36 @@ class ViewController: UIViewController {
 }
 
 class Cachorro {
-    var idadeAnos: Int
-    var idadeMeses: Int
-    var porte: String
+    let idadeAnos: Int
+    let idadeMeses: Int
+    let porte: String
     
     init(idadeAnos: Int, idadeMeses: Int, porte: String){
         self.idadeAnos = idadeAnos
         self.idadeMeses = idadeMeses
         self.porte = porte
+    }
+    
+    func anosHumanos() -> Int {
+        // Multiplica o valor escrito em anos por 7
+        return idadeAnos * 7
+    }
+    
+    func mesesHumanos() -> Int {
+        // Multiplica o valor escrito em meses por 7 / 12
+        return idadeMeses * 7 / 12
+    }
+    
+    func idadeHumana() -> Int {
+        var idadeHumana: Int
+        idadeHumana = anosHumanos() + mesesHumanos()
+        
+        if porte == "pequeno" {
+            idadeHumana = idadeHumana - 7
+        } else if porte == "grande" {
+            idadeHumana = idadeHumana + 5
+        }
+        
+        return idadeHumana
     }
 }
