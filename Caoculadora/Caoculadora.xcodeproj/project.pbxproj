@@ -78,6 +78,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF9373F27D91F2000EC3082 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C556E27D79F9D0001DE21 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEF9374027D91F3800EC3082 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C557027D79F9D0001DE21 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BEF9374127D91F5500EC3082 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9373927D91B4200EC3082 /* Cachorro.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEF9374227D91F8900EC3082 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C556A27D79F9D0001DE21 /* AppDelegate.swift */,
+				DB5C556C27D79F9D0001DE21 /* SceneDelegate.swift */,
+				DB5C557327D79F9E0001DE21 /* Assets.xcassets */,
+				DB5C557527D79F9E0001DE21 /* LaunchScreen.storyboard */,
+				DB5C557827D79F9E0001DE21 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		DB5C555E27D79F9D0001DE21 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +137,10 @@
 		DB5C556927D79F9D0001DE21 /* Caoculadora */ = {
 			isa = PBXGroup;
 			children = (
-				BEF9373927D91B4200EC3082 /* Cachorro.swift */,
-				DB5C556A27D79F9D0001DE21 /* AppDelegate.swift */,
-				DB5C556C27D79F9D0001DE21 /* SceneDelegate.swift */,
-				DB5C556E27D79F9D0001DE21 /* ViewController.swift */,
-				DB5C557027D79F9D0001DE21 /* Main.storyboard */,
-				DB5C557327D79F9E0001DE21 /* Assets.xcassets */,
-				DB5C557527D79F9E0001DE21 /* LaunchScreen.storyboard */,
-				DB5C557827D79F9E0001DE21 /* Info.plist */,
+				BEF9373F27D91F2000EC3082 /* Controllers */,
+				BEF9374127D91F5500EC3082 /* Models */,
+				BEF9374027D91F3800EC3082 /* Storyboards */,
+				BEF9374227D91F8900EC3082 /* SupportingFiles */,
 			);
 			path = Caoculadora;
 			sourceTree = "<group>";
