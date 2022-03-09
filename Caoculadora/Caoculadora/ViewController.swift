@@ -8,8 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBAction func tocouMedio() {
-        print("Hello World")
+
+    @IBOutlet var anosTextField: UITextField!
+    
+    @IBOutlet var pequenoButton: UIButton!
+    @IBOutlet var medioButton: UIButton!
+    @IBOutlet var grandeButton: UIButton!
+  
+    @IBAction func tocou(_ sender: UIButton) {
+        let anos = transformaAnosCaninosEmHumanos()
+        if sender == pequenoButton {
+            exibeResultado(de: anos)
+        } else if sender == medioButton {
+            exibeResultado(de: anos + 3)
+        }
+        else {
+            exibeResultado(de: anos + 7)
+        }
     }
     
     override func viewDidLoad() {
@@ -17,9 +32,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func transformaAnosCaninosEmHumanos() {
+    func transformaAnosCaninosEmHumanos() -> Int {
         // Lê o que está escrito no text field de anos
+        let anosCaninos: String = anosTextField.text!
+        
+        // Transformar texto em Int
+        let anosCaninosInt: Int
+        anosCaninosInt = Int(anosCaninos)!
+        
         // Multiplica o valor escrito em anos por 7
+        let anosHumanosInt = anosCaninosInt * 7
+        
+        return anosHumanosInt
     }
     
     func transformaMesesCaninosEmHumanos() {
@@ -35,7 +59,8 @@ class ViewController: UIViewController {
         // Esconde os labels, botões e text fields relativos a anos, meses e porte
     }
     
-    func exibeResultado() {
+    func exibeResultado(de valor: Int) {
+        print(valor)
         // Escreve na label de resultados o valor calculado em anos
         // Exibe os labels de resultado e o botão de recãocular
     }
