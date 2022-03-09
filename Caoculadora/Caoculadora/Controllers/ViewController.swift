@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -15,6 +15,16 @@ class ViewController: UIViewController, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if row == 0 {
+            return "Pequeno"
+        } else if row == 1 {
+            return "Médio"
+        } else {
+            return "Grande"
+        }
     }
     
 
@@ -60,6 +70,7 @@ class ViewController: UIViewController, UIPickerViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.sizePicker.dataSource = self
+        self.sizePicker.delegate = self
     }
 
     func leAnosCaninos() -> Int {
