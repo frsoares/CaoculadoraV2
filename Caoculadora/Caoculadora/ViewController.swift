@@ -97,3 +97,15 @@ class ViewController: UIViewController {
     }
 
 }
+
+class Cachorro {
+    var idadeAnos: Int
+    var idadeMeses: Int
+    var porte: String
+    
+    init(idadeAnos: Int, idadeMeses: Int, porte: String){
+        self.idadeAnos = idadeAnos
+        self.idadeMeses = idadeMeses
+        self.porte = porte
+    }
+}
