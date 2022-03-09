@@ -32,9 +32,9 @@ class Cachorro {
         var idadeHumana: Int
         idadeHumana = anosHumanos() + mesesHumanos()
         
-        if porte == "pequeno" {
+        if porte == "Pequeno" {
             idadeHumana = idadeHumana - 7
-        } else if porte == "grande" {
+        } else if porte == "Grande" {
             idadeHumana = idadeHumana + 5
         }
         

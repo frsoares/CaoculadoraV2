@@ -18,16 +18,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if row == 0 {
-            return "Pequeno"
-        } else if row == 1 {
-            return "Médio"
-        } else {
-            return "Grande"
-        }
+        return portes[row]
     }
     
-
     @IBOutlet var anosTextField: UITextField!
     @IBOutlet var mesesTextField: UITextField!
     
@@ -38,6 +31,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet var sizePicker: UIPickerView!
     
+    let portes: [String] = ["Pequeno", "Médio", "Grande"]
+    
   
     @IBAction func tocou(_ sender: UIButton) {
         let anos = leAnosCaninos()
@@ -46,16 +41,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let cachorro: Cachorro
         
         let selecionado = sizePicker.selectedRow(inComponent: 0)
+        let porte = portes[selecionado]
         
-        if selecionado == 0 {
-            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "pequeno")
-            
-        } else if selecionado == 1 {
-            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "medio")
-        }
-        else {
-            cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "grande")
-        }
+        cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: porte)
         
         exibeResultado(de: cachorro.idadeHumana())
     }
