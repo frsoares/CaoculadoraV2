@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF9373A27D91B4200EC3082 /* Cachorro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9373927D91B4200EC3082 /* Cachorro.swift */; };
 		DB5C556B27D79F9D0001DE21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C556A27D79F9D0001DE21 /* AppDelegate.swift */; };
 		DB5C556D27D79F9D0001DE21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C556C27D79F9D0001DE21 /* SceneDelegate.swift */; };
 		DB5C556F27D79F9D0001DE21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C556E27D79F9D0001DE21 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEF9373927D91B4200EC3082 /* Cachorro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachorro.swift; sourceTree = "<group>"; };
 		DB5C556727D79F9D0001DE21 /* Caoculadora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caoculadora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5C556A27D79F9D0001DE21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5C556C27D79F9D0001DE21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		DB5C556927D79F9D0001DE21 /* Caoculadora */ = {
 			isa = PBXGroup;
 			children = (
+				BEF9373927D91B4200EC3082 /* Cachorro.swift */,
 				DB5C556A27D79F9D0001DE21 /* AppDelegate.swift */,
 				DB5C556C27D79F9D0001DE21 /* SceneDelegate.swift */,
 				DB5C556E27D79F9D0001DE21 /* ViewController.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				DB5C556F27D79F9D0001DE21 /* ViewController.swift in Sources */,
 				DB5C556B27D79F9D0001DE21 /* AppDelegate.swift in Sources */,
+				BEF9373A27D91B4200EC3082 /* Cachorro.swift in Sources */,
 				DB5C556D27D79F9D0001DE21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
