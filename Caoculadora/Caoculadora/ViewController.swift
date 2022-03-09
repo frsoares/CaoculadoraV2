@@ -17,16 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet var grandeButton: UIButton!
   
     @IBAction func tocou(_ sender: UIButton) {
-        let anos = transformaAnosCaninosEmHumanos()
-        let meses = transformaMesesCaninosEmHumanos()
-        
         if sender == pequenoButton {
-            exibeResultado(de: anos + meses)
+            exibeResultado(de: somaAnosTransformados())
         } else if sender == medioButton {
-            exibeResultado(de: anos + meses + 3)
+            exibeResultado(de: somaAnosTransformados() + 3)
         }
         else {
-            exibeResultado(de: anos + meses + 7)
+            exibeResultado(de: somaAnosTransformados() + 7)
         }
     }
     
@@ -63,8 +60,12 @@ class ViewController: UIViewController {
         return mesesHumanosInt
     }
     
-    func somaAnosTransformados() {
+    func somaAnosTransformados() -> Int {
         // soma anos humanos + meses humanos
+        let anos = transformaAnosCaninosEmHumanos()
+        let meses = transformaMesesCaninosEmHumanos()
+        
+        return anos + meses
     }
     
     func escondeComponentes() {
