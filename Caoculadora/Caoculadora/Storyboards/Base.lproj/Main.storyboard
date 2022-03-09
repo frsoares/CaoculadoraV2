@@ -118,6 +118,9 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tocou:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8e-7w-Mq3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.992005527" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -132,6 +135,7 @@
                         <outlet property="mesesTextField" destination="cwh-3N-1R6" id="Xq4-PP-PnP"/>
                         <outlet property="resultadoLabel" destination="9hG-2m-Pkr" id="vDU-fV-dgq"/>
                         <outlet property="resultadoView" destination="SNd-o0-xX1" id="Fue-Od-UNL"/>
+                        <outlet property="sizePicker" destination="cXb-MD-G9g" id="fSj-zt-9kt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

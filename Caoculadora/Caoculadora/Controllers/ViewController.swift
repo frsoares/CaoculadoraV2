@@ -7,7 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+    
 
     @IBOutlet var anosTextField: UITextField!
     @IBOutlet var mesesTextField: UITextField!
@@ -17,9 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var resultadoLabel: UILabel!
     
-    @IBOutlet var pequenoButton: UIButton!
-    @IBOutlet var medioButton: UIButton!
-    @IBOutlet var grandeButton: UIButton!
+    @IBOutlet var sizePicker: UIPickerView!
+    
   
     @IBAction func tocou(_ sender: UIButton) {
         let anos = leAnosCaninos()
@@ -27,10 +35,12 @@ class ViewController: UIViewController {
         
         let cachorro: Cachorro
         
-        if sender == pequenoButton {
+        let selecionado = sizePicker.selectedRow(inComponent: 0)
+        
+        if selecionado == 0 {
             cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "pequeno")
             
-        } else if sender == medioButton {
+        } else if selecionado == 1 {
             cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: "medio")
         }
         else {
@@ -49,6 +59,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.sizePicker.dataSource = self
     }
 
     func leAnosCaninos() -> Int {
