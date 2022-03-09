@@ -67,7 +67,7 @@
                                 <color key="backgroundColor" red="0.99221378559999995" green="0.992005527" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IP6-Gm-9O6">
-                                <rect key="frame" x="32" y="120" width="310" height="261"/>
+                                <rect key="frame" x="32" y="120" width="310" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICt-Kw-4CV">
@@ -103,35 +103,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7A-qb-Q00">
-                                        <rect key="frame" x="22" y="211" width="50" height="50"/>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-MD-G9g">
+                                        <rect key="frame" x="-32" y="202" width="375" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-rp-bAE">
+                                        <rect key="frame" x="-3" y="342" width="316" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_pequeno"/>
-                                        <connections>
-                                            <action selector="tocou:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJF-qU-4Dl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-lQ-9A6">
-                                        <rect key="frame" x="130" y="211" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_medio"/>
-                                        <connections>
-                                            <action selector="tocou:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etg-pc-oRh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZB-ly-kqM">
-                                        <rect key="frame" x="238" y="211" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bt_porte_grande"/>
-                                        <connections>
-                                            <action selector="tocou:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ih-Wc-ybz"/>
-                                        </connections>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cãocular">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="backgroundColor" red="0.38431372549999998" green="0.32156862749999998" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.992005527" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -142,11 +128,8 @@
                     </view>
                     <connections>
                         <outlet property="anosTextField" destination="vVq-Qz-nHT" id="ysF-RN-Yu4"/>
-                        <outlet property="grandeButton" destination="pZB-ly-kqM" id="FXM-wV-Kck"/>
                         <outlet property="inicioView" destination="IP6-Gm-9O6" id="w5M-Ta-dC7"/>
-                        <outlet property="medioButton" destination="9fi-lQ-9A6" id="Vsj-ho-LUI"/>
                         <outlet property="mesesTextField" destination="cwh-3N-1R6" id="Xq4-PP-PnP"/>
-                        <outlet property="pequenoButton" destination="a7A-qb-Q00" id="Mi6-DU-OUo"/>
                         <outlet property="resultadoLabel" destination="9hG-2m-Pkr" id="vDU-fV-dgq"/>
                         <outlet property="resultadoView" destination="SNd-o0-xX1" id="Fue-Od-UNL"/>
                     </connections>
@@ -158,9 +141,6 @@
     </scenes>
     <resources>
         <image name="BG Shape" width="375" height="665"/>
-        <image name="bt_porte_grande" width="50" height="50"/>
-        <image name="bt_porte_medio" width="50" height="50"/>
-        <image name="bt_porte_pequeno" width="50" height="50"/>
         <image name="clara" width="296" height="317"/>
     </resources>
 </document>
