@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var anosTextField: UITextField!
+    @IBOutlet var mesesTextField: UITextField!
     
     @IBOutlet var pequenoButton: UIButton!
     @IBOutlet var medioButton: UIButton!
@@ -17,13 +18,15 @@ class ViewController: UIViewController {
   
     @IBAction func tocou(_ sender: UIButton) {
         let anos = transformaAnosCaninosEmHumanos()
+        let meses = transformaMesesCaninosEmHumanos()
+        
         if sender == pequenoButton {
-            exibeResultado(de: anos)
+            exibeResultado(de: anos + meses)
         } else if sender == medioButton {
-            exibeResultado(de: anos + 3)
+            exibeResultado(de: anos + meses + 3)
         }
         else {
-            exibeResultado(de: anos + 7)
+            exibeResultado(de: anos + meses + 7)
         }
     }
     
@@ -46,9 +49,18 @@ class ViewController: UIViewController {
         return anosHumanosInt
     }
     
-    func transformaMesesCaninosEmHumanos() {
+    func transformaMesesCaninosEmHumanos() -> Int {
         // Lê o que está escrito no text field de meses
+        let mesesCaninos: String = mesesTextField.text!
+        
+        // Transformar texto em Int
+        let mesesCaninosInt: Int
+        mesesCaninosInt = Int(mesesCaninos)!
+        
         // Multiplica o valor escrito em meses por 7 / 12
+        let mesesHumanosInt = mesesCaninosInt * 7 / 12
+        
+        return mesesHumanosInt
     }
     
     func somaAnosTransformados() {

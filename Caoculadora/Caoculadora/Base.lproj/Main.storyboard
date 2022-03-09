@@ -142,6 +142,7 @@
                         <outlet property="anosTextField" destination="vVq-Qz-nHT" id="ysF-RN-Yu4"/>
                         <outlet property="grandeButton" destination="pZB-ly-kqM" id="FXM-wV-Kck"/>
                         <outlet property="medioButton" destination="9fi-lQ-9A6" id="Vsj-ho-LUI"/>
+                        <outlet property="mesesTextField" destination="cwh-3N-1R6" id="Xq4-PP-PnP"/>
                         <outlet property="pequenoButton" destination="a7A-qb-Q00" id="Mi6-DU-OUo"/>
                     </connections>
                 </viewController>
