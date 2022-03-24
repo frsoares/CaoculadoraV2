@@ -17,6 +17,8 @@
 		DB5C558227D79F9F0001DE21 /* CaoculadoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C558127D79F9F0001DE21 /* CaoculadoraTests.swift */; };
 		DB5C558C27D79F9F0001DE21 /* CaoculadoraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C558B27D79F9F0001DE21 /* CaoculadoraUITests.swift */; };
 		DB5C558E27D79F9F0001DE21 /* CaoculadoraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C558D27D79F9F0001DE21 /* CaoculadoraUITestsLaunchTests.swift */; };
+		F2ABFCBB27E8C1A50065B5BB /* Raca.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABFCBA27E8C1A50065B5BB /* Raca.swift */; };
+		F2ABFCBD27E8C9470065B5BB /* RacaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABFCBC27E8C9470065B5BB /* RacaCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DB5C558727D79F9F0001DE21 /* CaoculadoraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaoculadoraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5C558B27D79F9F0001DE21 /* CaoculadoraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaoculadoraUITests.swift; sourceTree = "<group>"; };
 		DB5C558D27D79F9F0001DE21 /* CaoculadoraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaoculadoraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2ABFCBA27E8C1A50065B5BB /* Raca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
+		F2ABFCBC27E8C9470065B5BB /* RacaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacaCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF9373927D91B4200EC3082 /* Cachorro.swift */,
+				F2ABFCBA27E8C1A50065B5BB /* Raca.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		DB5C556927D79F9D0001DE21 /* Caoculadora */ = {
 			isa = PBXGroup;
 			children = (
+				F2ABFCB927E8BB650065B5BB /* Views */,
 				BEF9373F27D91F2000EC3082 /* Controllers */,
 				BEF9374127D91F5500EC3082 /* Models */,
 				BEF9374027D91F3800EC3082 /* Storyboards */,
@@ -160,6 +166,14 @@
 				DB5C558D27D79F9F0001DE21 /* CaoculadoraUITestsLaunchTests.swift */,
 			);
 			path = CaoculadoraUITests;
+			sourceTree = "<group>";
+		};
+		F2ABFCB927E8BB650065B5BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2ABFCBC27E8C9470065B5BB /* RacaCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +309,8 @@
 			files = (
 				DB5C556F27D79F9D0001DE21 /* ViewController.swift in Sources */,
 				DB5C556B27D79F9D0001DE21 /* AppDelegate.swift in Sources */,
+				F2ABFCBB27E8C1A50065B5BB /* Raca.swift in Sources */,
+				F2ABFCBD27E8C9470065B5BB /* RacaCollectionViewCell.swift in Sources */,
 				BEF9373A27D91B4200EC3082 /* Cachorro.swift in Sources */,
 				DB5C556D27D79F9D0001DE21 /* SceneDelegate.swift in Sources */,
 			);

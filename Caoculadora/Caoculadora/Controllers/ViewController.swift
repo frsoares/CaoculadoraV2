@@ -7,20 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return portes[row]
-    }
-    
+    @IBOutlet weak var collectioView: UICollectionView!
+   
     @IBOutlet var anosTextField: UITextField!
     @IBOutlet var mesesTextField: UITextField!
     
@@ -29,24 +19,73 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet var resultadoLabel: UILabel!
     
-    @IBOutlet var sizePicker: UIPickerView!
     
-    let portes: [String] = ["Pequeno", "Médio", "Grande"]
+    let racas: [Raca] = [Raca(descricao: "Bulldog", porte: "Pequeno", imagem: "bulldog"),
+                         Raca(descricao: "Catioro", porte: "Médio", imagem: "catioro"),
+                         Raca(descricao: "Chihuahua", porte: "Pequeno", imagem: "chihuahua"),
+                         Raca(descricao: "Golden", porte: "Grande", imagem: "golden"),
+                         Raca(descricao: "Maltês", porte: "Pequeno", imagem: "maltes"),
+                         Raca(descricao: "Pastor", porte: "Grande", imagem: "pastor"),
+                         Raca(descricao: "Samoieda", porte: "Grande", imagem: "samoieda")
+    ]
     
-  
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("numberOfItemsInSection")
+        return racas.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("cellForItemAt")
+        
+        let viewCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "racaViewCell", for: indexPath) as! RacaCollectionViewCell
+        let raca = racas[indexPath.row]
+        viewCell.imageView.image = UIImage(named: raca.imagem)
+        viewCell.labelRaca.text = ""
+        viewCell.contentView.backgroundColor = UIColor.white
+        let itemSelecionado =  collectionView.indexPathsForSelectedItems?.contains(indexPath) ?? false
+        
+        if itemSelecionado {
+            viewCell.labelRaca.text = racas[indexPath.row].descricao
+            viewCell.labelRaca.isHidden = false
+        } else {
+            viewCell.labelRaca.isHidden = true
+        }
+        return viewCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewCell = collectioView.cellForItem(at: indexPath) as? RacaCollectionViewCell {
+            viewCell.labelRaca.text = racas[indexPath.row].descricao
+            viewCell.labelRaca.isHidden = false
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let viewCell = collectioView.cellForItem(at: indexPath) as? RacaCollectionViewCell {
+            viewCell.labelRaca.isHidden = true
+        }
+    }
+    
+    
     @IBAction func tocou(_ sender: UIButton) {
         let anos = leAnosCaninos()
         let meses = leMesesCaninos()
         
         let cachorro: Cachorro
         
-        let selecionado = sizePicker.selectedRow(inComponent: 0)
-        let porte = portes[selecionado]
+        let selecionado = collectioView.indexPathsForSelectedItems![0]
+        let porte = racas[selecionado.row].porte
         
         cachorro = Cachorro(idadeAnos: anos, idadeMeses: meses, porte: porte)
         
         exibeResultado(de: cachorro.idadeHumana())
     }
+    
     
     @IBAction func recaocular() {
         //Esconde view do resultado e exibe view de início
@@ -57,8 +96,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.sizePicker.dataSource = self
-        self.sizePicker.delegate = self
+        self.collectioView.dataSource = self
+        self.collectioView.delegate = self
+        //deixa primeiro item da collection view já selecionado
+        self.collectioView.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.left)
     }
 
     func leAnosCaninos() -> Int {
@@ -68,7 +109,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Transformar texto em Int
         let anosCaninosInt: Int
         anosCaninosInt = Int(anosCaninos)!
-        
         return anosCaninosInt
     }
     
